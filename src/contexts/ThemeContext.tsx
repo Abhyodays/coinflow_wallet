@@ -46,3 +46,5 @@ const ThemeProvider = ({ children }: PropsWithChildren<ReactNode>) => {
         </ThemeContext.Provider>
     )
 }
+
+export { useTheme, ThemeProvider }
