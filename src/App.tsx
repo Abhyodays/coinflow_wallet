@@ -1,12 +1,12 @@
-import { Text, View } from "react-native";
+import { Button, Text, View } from "react-native";
+import { ThemeProvider, useTheme } from "./contexts/ThemeContext";
+import Router from "./router/Router";
 
 function App() {
     return (
-        <View>
-            <Text>
-                App
-            </Text>
-        </View>
+        <ThemeProvider>
+            <Router />
+        </ThemeProvider>
     )
 }
 

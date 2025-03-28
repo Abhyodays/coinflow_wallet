@@ -18,7 +18,7 @@ const useTheme = () => {
     return context;
 }
 
-const ThemeProvider = ({ children }: PropsWithChildren<ReactNode>) => {
+const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [theme, setTheme] = useState<Theme>(Appearance.getColorScheme() === "dark" ? darkTheme : lightTheme);
 
     const toggleTheme = () => {

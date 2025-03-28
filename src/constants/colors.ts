@@ -5,14 +5,14 @@ const lightTheme:Theme = {
     title:"light",
     colors:{
         text:{
-            primary:'#09122C',
-            secondary:'#9AA6B2'
+            primary:'#0F172A',
+            secondary:'#64748B'
         },
         background:{
             primary:'#FAFAF6',
-            secondary:'#DDDDDD'
+            secondary:'#CBD5E1'
         },
-        selection:'#4671ED'
+        selection:'#4ADE80'
     }
 }
 
@@ -20,14 +20,14 @@ const darkTheme:Theme = {
     title:'dark',
     colors:{
         text:{
-            primary:"#F8F8F8",
-            secondary:"#878C98"
+            primary:"#F8FAFC",
+            secondary:"#64748B"
         },
         background:{
             primary:'#000000',
-            secondary:'#32353C'
+            secondary:'#334155'
         },
-        selection:"#4671ED"
+        selection:"#2563EB"
     }
 }
 
