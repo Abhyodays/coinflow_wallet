@@ -6,6 +6,9 @@ import { useTheme } from "../../contexts/ThemeContext";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { AuthStackParamList } from "../../router/AuthStack";
+import LottieView from "lottie-react-native";
+import OnboardingLottie from '../../../assets/lotties/onboarding_lottie.json'
+
 
 
 const Onboarding = () => {
@@ -19,12 +22,15 @@ const Onboarding = () => {
         <View style={styles.container}>
             <StatusBar backgroundColor={darkTheme.colors.background.primary} barStyle="light-content" />
             <View style={styles.poster_container}>
-                <Image source={OnboardingPoster} style={styles.poster} resizeMode="cover" />
-            </View>
-            <View style={styles.button_container}>
+                <LottieView source={OnboardingLottie}
+                    style={styles.poster}
+                    loop
+                    autoPlay />
                 <Text style={[styles.onboarding_text]}>
                     Own, control and Leverage the power of your digital assets
                 </Text>
+            </View>
+            <View style={styles.button_container}>
                 <Button
                     style={[styles.button, styles.create_button]}
                     labelStyle={[styles.text, styles.button_text, styles.create_button_text]}
@@ -33,7 +39,7 @@ const Onboarding = () => {
                     Create new wallet
                 </Button>
                 <Button
-                    style={[styles.button, styles.existing_button]}
+                    style={[styles.button]}
                     labelStyle={[styles.text, styles.button_text, styles.existing_button_text]}
                 >
                     I already have a wallet
@@ -52,26 +58,29 @@ const styles = StyleSheet.create({
         backgroundColor: darkTheme.colors.background.primary
     },
     poster_container: {
-        flex: 7,
+        flex: 8,
         justifyContent: 'center',
         alignItems: 'center'
     },
     poster: {
-        width: Dimensions.get('screen').width
+        width: Dimensions.get('screen').width,
+        height: '100%'
     },
     onboarding_text: {
         fontSize: 24,
         fontFamily: 'Poppins-SemiBold',
         width: 300,
-        color: darkTheme.colors.text.primary
+        color: darkTheme.colors.text.primary,
+        position: 'absolute',
+        bottom: 50
     },
     button_container: {
-        flex: 3,
+        flex: 2,
         gap: 10
     },
     button: {
-        paddingVertical: 5,
-        borderRadius: 40,
+        paddingVertical: 10,
+        borderRadius: 50,
         width: Dimensions.get('screen').width - 60
     },
     create_button: {

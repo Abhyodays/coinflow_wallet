@@ -3,6 +3,7 @@ import { ThemeColors } from "../types/ThemeColors";
 
 const lightTheme:Theme = {
     title:"light",
+    dark:false,
     colors:{
         text:{
             primary:'#0F172A',
@@ -18,6 +19,7 @@ const lightTheme:Theme = {
 
 const darkTheme:Theme = {
     title:'dark',
+    dark:true,
     colors:{
         text:{
             primary:"#F8FAFC",

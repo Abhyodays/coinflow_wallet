@@ -1,11 +1,9 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import PasscodeScreen from '../../components/PasscodeScreen'
 
 const SecurityCheck = () => {
     return (
-        <View>
-            <Text>Security Check</Text>
-        </View>
+        <PasscodeScreen title='Enter passcode' />
     )
 }
 

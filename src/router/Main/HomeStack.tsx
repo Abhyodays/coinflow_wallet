@@ -11,7 +11,7 @@ export type HomeStackParamList = {
 const HomeStack = () => {
     const Stack = createStackNavigator<HomeStackParamList>();
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{ headerStyle: { elevation: 0, shadowOpacity: 0 } }}>
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Settings" component={Settings} />
             <Stack.Screen name="Search" component={Search} />
